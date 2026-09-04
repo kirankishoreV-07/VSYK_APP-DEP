@@ -20,6 +20,14 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 5000;
 
+// Managed hosts (Railway, Render, Fly) terminate TLS at a proxy and pass the
+// caller's address in X-Forwarded-For. Without this, req.ip resolves to the
+// proxy for every request, so express-rate-limit counts the entire user base
+// as a single client and everyone shares one 300-per-15-minute bucket.
+// The value is the number of proxy hops to trust — 1 for a standard managed
+// host. Set TRUST_PROXY_HOPS=0 when running with no proxy in front.
+app.set('trust proxy', Number.parseInt(process.env.TRUST_PROXY_HOPS ?? '1', 10) || 0);
+
 const razorpayKeyId = process.env.RAZORPAY_KEY_ID || '';
 const razorpayKeySecret = process.env.RAZORPAY_KEY_SECRET || '';
 const razorpay = razorpayKeyId && razorpayKeySecret
