@@ -13,7 +13,7 @@
   "license": "ISC",
   "type": "commonjs",
   "engines": {
-    "node": ">=20 <27"
+    "node": ">=22 <27"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.105.3",
