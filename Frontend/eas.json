@@ -18,7 +18,8 @@
       },
       "env": {
         "EXPO_PUBLIC_SUPABASE_URL": "https://rmbyjndeaqaupgndhotl.supabase.co",
-        "EXPO_PUBLIC_SUPABASE_ANON_KEY": "sb_publishable_6iofTco4NnAzYShwOyzEvA_7wDbooCh"
+        "EXPO_PUBLIC_SUPABASE_ANON_KEY": "sb_publishable_6iofTco4NnAzYShwOyzEvA_7wDbooCh",
+        "EXPO_PUBLIC_API_URL": "https://vsykbackend-production.up.railway.app"
       }
     },
     "apk": {
@@ -36,7 +37,8 @@
       },
       "env": {
         "EXPO_PUBLIC_SUPABASE_URL": "https://rmbyjndeaqaupgndhotl.supabase.co",
-        "EXPO_PUBLIC_SUPABASE_ANON_KEY": "sb_publishable_6iofTco4NnAzYShwOyzEvA_7wDbooCh"
+        "EXPO_PUBLIC_SUPABASE_ANON_KEY": "sb_publishable_6iofTco4NnAzYShwOyzEvA_7wDbooCh",
+        "EXPO_PUBLIC_API_URL": "https://vsykbackend-production.up.railway.app"
       }
     }
   },
